@@ -91,6 +91,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmat__t.html">mat_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix structure that simulates a 2d matrix accessed by A(row, col).  <a href="structmat__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmat__col__iterator__t.html">mat_col_iterator_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmat__row__iterator__t.html">mat_row_iterator_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -103,6 +107,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a1249a06feae557679b40c8b6d0fed297"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmat__t.html">mat_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a></td></tr>
 <tr class="memdesc:a1249a06feae557679b40c8b6d0fed297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix structure that simulates a 2d matrix accessed by A(row, col).  <a href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">More...</a><br /></td></tr>
 <tr class="separator:a1249a06feae557679b40c8b6d0fed297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd7945c840bba3d9bf7f7d8a67e19f4"><td class="memItemLeft" align="right" valign="top"><a id="a9bd7945c840bba3d9bf7f7d8a67e19f4" name="a9bd7945c840bba3d9bf7f7d8a67e19f4"></a>
+typedef struct <a class="el" href="structmat__col__iterator__t.html">mat_col_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ColIter</b></td></tr>
+<tr class="separator:a9bd7945c840bba3d9bf7f7d8a67e19f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6bcb60281981d0ca9fdd668f94e530"><td class="memItemLeft" align="right" valign="top"><a id="a2c6bcb60281981d0ca9fdd668f94e530" name="a2c6bcb60281981d0ca9fdd668f94e530"></a>
+typedef struct <a class="el" href="structmat__row__iterator__t.html">mat_row_iterator_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RowIter</b></td></tr>
+<tr class="separator:a2c6bcb60281981d0ca9fdd668f94e530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad15cb404741731a7e99a689646d9628c"><td class="memItemLeft" align="right" valign="top"><a id="ad15cb404741731a7e99a689646d9628c" name="ad15cb404741731a7e99a689646d9628c"></a>
 typedef <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Vector</b></td></tr>
 <tr class="separator:ad15cb404741731a7e99a689646d9628c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,6 +338,18 @@ MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>vecpnorm</b> (
 <tr class="memitem:a9c5b55ab283ad237b7d5acfc0c7f35eb"><td class="memItemLeft" align="right" valign="top"><a id="a9c5b55ab283ad237b7d5acfc0c7f35eb" name="a9c5b55ab283ad237b7d5acfc0c7f35eb"></a>
 MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>vecnorm</b> (const <a class="el" href="structmat__t.html">Vector</a> *__A)</td></tr>
 <tr class="separator:a9c5b55ab283ad237b7d5acfc0c7f35eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b4690f7fdee5d000f03e0ec0cdce1e"><td class="memItemLeft" align="right" valign="top"><a id="a22b4690f7fdee5d000f03e0ec0cdce1e" name="a22b4690f7fdee5d000f03e0ec0cdce1e"></a>
+MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>colnorm</b> (<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__begin, const <a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__end)</td></tr>
+<tr class="separator:a22b4690f7fdee5d000f03e0ec0cdce1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c5c9adc02cb6bc9a8e3dde0d3c63db"><td class="memItemLeft" align="right" valign="top"><a id="a77c5c9adc02cb6bc9a8e3dde0d3c63db" name="a77c5c9adc02cb6bc9a8e3dde0d3c63db"></a>
+MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_col_norm</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, size_t __j)</td></tr>
+<tr class="separator:a77c5c9adc02cb6bc9a8e3dde0d3c63db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449742076abf6f11f2ce7f500934048c"><td class="memItemLeft" align="right" valign="top"><a id="a449742076abf6f11f2ce7f500934048c" name="a449742076abf6f11f2ce7f500934048c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>matnormcol</b> (<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__begin, const <a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__end)</td></tr>
+<tr class="separator:a449742076abf6f11f2ce7f500934048c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808e24718b4d62f768db2628f7a1fd06"><td class="memItemLeft" align="right" valign="top"><a id="a808e24718b4d62f768db2628f7a1fd06" name="a808e24718b4d62f768db2628f7a1fd06"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>matnormcols</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A)</td></tr>
+<tr class="separator:a808e24718b4d62f768db2628f7a1fd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b56c7290080ef422c450e826f99265"><td class="memItemLeft" align="right" valign="top"><a id="ab9b56c7290080ef422c450e826f99265" name="ab9b56c7290080ef422c450e826f99265"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vecnormalize</b> (<a class="el" href="structmat__t.html">Vector</a> *__u)</td></tr>
 <tr class="separator:ab9b56c7290080ef422c450e826f99265"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,9 +359,61 @@ MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_norm</b
 <tr class="memitem:a9ef503df16e18f2c9c8aef5bdbefa607"><td class="memItemLeft" align="right" valign="top"><a id="a9ef503df16e18f2c9c8aef5bdbefa607" name="a9ef503df16e18f2c9c8aef5bdbefa607"></a>
 <a class="el" href="structmat__t.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_normalize</b> (const <a class="el" href="structmat__t.html">Vector</a> *__u)</td></tr>
 <tr class="separator:a9ef503df16e18f2c9c8aef5bdbefa607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4d040bd6e55203fe1c5b5503b45d0a"><td class="memItemLeft" align="right" valign="top"><a id="a5c4d040bd6e55203fe1c5b5503b45d0a" name="a5c4d040bd6e55203fe1c5b5503b45d0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_normalize_col</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, size_t __j)</td></tr>
+<tr class="separator:a5c4d040bd6e55203fe1c5b5503b45d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd29565ab113e08461ca29d2bf0ac3b"><td class="memItemLeft" align="right" valign="top"><a id="a2dd29565ab113e08461ca29d2bf0ac3b" name="a2dd29565ab113e08461ca29d2bf0ac3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_normalize_cols</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A)</td></tr>
+<tr class="separator:a2dd29565ab113e08461ca29d2bf0ac3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9a987b86a9aea0f11f8e4af2972d50"><td class="memItemLeft" align="right" valign="top"><a id="acb9a987b86a9aea0f11f8e4af2972d50" name="acb9a987b86a9aea0f11f8e4af2972d50"></a>
 <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gausselim</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__B)</td></tr>
 <tr class="separator:acb9a987b86a9aea0f11f8e4af2972d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0865f32098d7b526c120f4e46c61b55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmat__t.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ae0865f32098d7b526c120f4e46c61b55">Vector_new</a> (size_t __nrows)</td></tr>
+<tr class="separator:ae0865f32098d7b526c120f4e46c61b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad791e3508696726659b7a4866448b68d"><td class="memItemLeft" align="right" valign="top"><a id="ad791e3508696726659b7a4866448b68d" name="ad791e3508696726659b7a4866448b68d"></a>
+<a class="el" href="structmat__t.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_rand</b> (size_t __nrows)</td></tr>
+<tr class="separator:ad791e3508696726659b7a4866448b68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9944600af2f55b2824518a13c6e2bb83"><td class="memItemLeft" align="right" valign="top"><a id="a9944600af2f55b2824518a13c6e2bb83" name="a9944600af2f55b2824518a13c6e2bb83"></a>
+<a class="el" href="structmat__t.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_random</b> (size_t __nrows, int __min, int __max)</td></tr>
+<tr class="separator:a9944600af2f55b2824518a13c6e2bb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab331c3f4d9bcf5bb32d90e33a2ba1958"><td class="memItemLeft" align="right" valign="top"><a id="ab331c3f4d9bcf5bb32d90e33a2ba1958" name="ab331c3f4d9bcf5bb32d90e33a2ba1958"></a>
+MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>vecdot</b> (const <a class="el" href="structmat__t.html">Vector</a> *__u, const <a class="el" href="structmat__t.html">Vector</a> *__v)</td></tr>
+<tr class="separator:ab331c3f4d9bcf5bb32d90e33a2ba1958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5392b8a35b513457129bb79e812e3cb"><td class="memItemLeft" align="right" valign="top"><a id="ac5392b8a35b513457129bb79e812e3cb" name="ac5392b8a35b513457129bb79e812e3cb"></a>
+MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_inner</b> (const <a class="el" href="structmat__t.html">Vector</a> *__u, const <a class="el" href="structmat__t.html">Vector</a> *__v)</td></tr>
+<tr class="separator:ac5392b8a35b513457129bb79e812e3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69473931e433acbee7d9ca7e3b085703"><td class="memItemLeft" align="right" valign="top"><a id="a69473931e433acbee7d9ca7e3b085703" name="a69473931e433acbee7d9ca7e3b085703"></a>
+<a class="el" href="structmat__t.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>vecproject</b> (const <a class="el" href="structmat__t.html">Vector</a> *__v, const <a class="el" href="structmat__t.html">Vector</a> *__u)</td></tr>
+<tr class="separator:a69473931e433acbee7d9ca7e3b085703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add22edc929a76aa51121807b87815cd8"><td class="memItemLeft" align="right" valign="top"><a id="add22edc929a76aa51121807b87815cd8" name="add22edc929a76aa51121807b87815cd8"></a>
+<a class="el" href="structmat__t.html">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_project_onto</b> (const <a class="el" href="structmat__t.html">Vector</a> *__v, const <a class="el" href="structmat__t.html">Vector</a> *__u)</td></tr>
+<tr class="separator:add22edc929a76aa51121807b87815cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae174060277768744a172859a8bb8a95a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmat__col__iterator__t.html">ColIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ae174060277768744a172859a8bb8a95a">ColIter_new</a> (MATRIX_TYPE *__ptr, size_t __nrows)</td></tr>
+<tr class="separator:ae174060277768744a172859a8bb8a95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb94196b350ff856aa497c9d42e79133"><td class="memItemLeft" align="right" valign="top"><a id="afb94196b350ff856aa497c9d42e79133" name="afb94196b350ff856aa497c9d42e79133"></a>
+<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ColIter_clone</b> (const <a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__c)</td></tr>
+<tr class="separator:afb94196b350ff856aa497c9d42e79133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ae794c62e227c5a93d973841308b1b"><td class="memItemLeft" align="right" valign="top"><a id="aa7ae794c62e227c5a93d973841308b1b" name="aa7ae794c62e227c5a93d973841308b1b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ColIter_free</b> (<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__c)</td></tr>
+<tr class="separator:aa7ae794c62e227c5a93d973841308b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafdf8da8d8d490e857b90e5e0f2801a"><td class="memItemLeft" align="right" valign="top"><a id="afafdf8da8d8d490e857b90e5e0f2801a" name="afafdf8da8d8d490e857b90e5e0f2801a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ColIter_next</b> (<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__c)</td></tr>
+<tr class="separator:afafdf8da8d8d490e857b90e5e0f2801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6192f07180fa5f408e61ad4d2467573a"><td class="memItemLeft" align="right" valign="top"><a id="a6192f07180fa5f408e61ad4d2467573a" name="a6192f07180fa5f408e61ad4d2467573a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ColIter_cmp</b> (const <a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__lhs, const <a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__rhs)</td></tr>
+<tr class="separator:a6192f07180fa5f408e61ad4d2467573a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a2a1494212dac59621838ce2ed3209"><td class="memItemLeft" align="right" valign="top"><a id="a06a2a1494212dac59621838ce2ed3209" name="a06a2a1494212dac59621838ce2ed3209"></a>
+<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matcolpos</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, size_t __i, size_t __j)</td></tr>
+<tr class="separator:a06a2a1494212dac59621838ce2ed3209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec3d5a2f1fb92724b97e63ddd74b95e"><td class="memItemLeft" align="right" valign="top"><a id="a8ec3d5a2f1fb92724b97e63ddd74b95e" name="a8ec3d5a2f1fb92724b97e63ddd74b95e"></a>
+<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_col_end</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, size_t __j)</td></tr>
+<tr class="separator:a8ec3d5a2f1fb92724b97e63ddd74b95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73d90ab65b4a35c6d7f2e7238217193"><td class="memItemLeft" align="right" valign="top"><a id="ae73d90ab65b4a35c6d7f2e7238217193" name="ae73d90ab65b4a35c6d7f2e7238217193"></a>
+<a class="el" href="structmat__col__iterator__t.html">ColIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_col_begin</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, size_t __j)</td></tr>
+<tr class="separator:ae73d90ab65b4a35c6d7f2e7238217193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06f12778c3b1a820911b42b070eda97"><td class="memItemLeft" align="right" valign="top"><a id="af06f12778c3b1a820911b42b070eda97" name="af06f12778c3b1a820911b42b070eda97"></a>
+MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>ColIter_value</b> (const <a class="el" href="structmat__col__iterator__t.html">ColIter</a> *__c)</td></tr>
+<tr class="separator:af06f12778c3b1a820911b42b070eda97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implement a Matrix framework for performing basic Linear Algebra tasks. </p>
@@ -365,6 +439,37 @@ MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_norm</b
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ae174060277768744a172859a8bb8a95a" name="ae174060277768744a172859a8bb8a95a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae174060277768744a172859a8bb8a95a">&#9670;&nbsp;</a></span>ColIter_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmat__col__iterator__t.html">ColIter</a> * ColIter_new </td>
+          <td>(</td>
+          <td class="paramtype">MATRIX_TYPE *&#160;</td>
+          <td class="paramname"><em>__ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>__nrows</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >================================================================================================ </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+!                                        ColIter functions</h1>
+
+</div>
+</div>
 <a id="a84508491bb25d3fa5853bffdc899f686" name="a84508491bb25d3fa5853bffdc899f686"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84508491bb25d3fa5853bffdc899f686">&#9670;&nbsp;</a></span>matat()</h2>
 
@@ -1355,6 +1460,27 @@ MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_norm</b
       </table>
 </div><div class="memdoc">
 <p >Instantiate new matrix with the value filled in at every element </p>
+
+</div>
+</div>
+<a id="ae0865f32098d7b526c120f4e46c61b55" name="ae0865f32098d7b526c120f4e46c61b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0865f32098d7b526c120f4e46c61b55">&#9670;&nbsp;</a></span>Vector_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmat__t.html">Vector</a> * Vector_new </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>__nrows</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >================================================================================================ </p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+!                                        Vector declarations</h1>
 
 </div>
 </div>

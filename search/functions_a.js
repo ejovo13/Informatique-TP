@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xoshiro256ss_0',['xoshiro256ss',['../ejovo__rand_8h.html#aa8c33e5420596f7a1903881d679c0d1d',1,'ejovo_rand.h']]]
+  ['vector_5fnew_0',['Vector_new',['../ejovo__matrix_8h.html#ae0865f32098d7b526c120f4e46c61b55',1,'ejovo_matrix.h']]]
 ];
