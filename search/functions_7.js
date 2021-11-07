@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['reverse_5fstring_0',['reverse_string',['../ejovo__string_8h.html#a2fff45352dc3daf913d02c8484f1eb11',1,'ejovo_string.h']]],
-  ['reverse_5fstring_5fn_1',['reverse_string_n',['../ejovo__string_8h.html#a4beb0ccca089d842a5b92a64175f7551',1,'ejovo_string.h']]],
-  ['rol64_2',['rol64',['../ejovo__rand_8h.html#ab60efacee6d1141acada9ed8ccc2ad82',1,'ejovo_rand.h']]]
+  ['plus_5flongue_5fexpr_0',['plus_longue_expr',['../ejovo__string_8h.html#a799bdf10b9c8e2af0cf2cedc487ce784',1,'ejovo_string.h']]],
+  ['print_5fint_5farray_1',['print_int_array',['../ejovo__print_8h.html#ac30fac5e45f069e0e384f89438ddc346',1,'ejovo_print.h']]],
+  ['print_5fline_2',['print_line',['../ejovo__print_8h.html#a458a282b2005ffef32670e2d846b9d39',1,'hw_printer.h']]],
+  ['print_5fxoshiro256ss_5fstate_3',['print_xoshiro256ss_state',['../ejovo__rand_8h.html#af0de3618ce2219dbb54728b24b9a665a',1,'ejovo_rand.h']]]
 ];

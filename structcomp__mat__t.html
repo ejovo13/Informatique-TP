@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TPx: File Members</title>
+<title>TPx: comp_mat_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,14 +60,37 @@ $(function() {
 </iframe>
 </div>
 
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcomp__mat__t-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">comp_mat_t Struct Reference</div></div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>ColIter&#160;:&#160;<a class="el" href="ejovo__matrix_8h.html#a9bd7945c840bba3d9bf7f7d8a67e19f4">ejovo_matrix.h</a></li>
-<li>ComplexMatrix&#160;:&#160;<a class="el" href="ejovo__comp__matrix_8h.html#a582c04c87014a4b91e934e333b21b9aa">ejovo_comp_matrix.h</a></li>
-<li>Mask&#160;:&#160;<a class="el" href="ejovo__matrix_8h.html#a8c40c3c59fbcb15050f87518ee30140f">ejovo_matrix.h</a></li>
-<li>Matrix&#160;:&#160;<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">ejovo_matrix.h</a></li>
-<li>Vector&#160;:&#160;<a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">ejovo_matrix.h</a></li>
-<li>xor_rng&#160;:&#160;<a class="el" href="ejovo__rand_8h.html#ad7c04ebd61669e043aab507852c174f6">ejovo_rand.h</a></li>
+
+<p>Matrix structure that simulates a 2d matrix accessed by A(row, col).  
+ <a href="structcomp__mat__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ejovo__comp__matrix_8h_source.html">ejovo_comp_matrix.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a30798579a7e15af07a2a5f867fc503a7"><td class="memItemLeft" align="right" valign="top"><a id="a30798579a7e15af07a2a5f867fc503a7" name="a30798579a7e15af07a2a5f867fc503a7"></a>
+COMPLEX_MATRIX_TYPE *restrict&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="separator:a30798579a7e15af07a2a5f867fc503a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120006dd638bd98ad6c1ad11f8931d59"><td class="memItemLeft" align="right" valign="top"><a id="a120006dd638bd98ad6c1ad11f8931d59" name="a120006dd638bd98ad6c1ad11f8931d59"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nrows</b></td></tr>
+<tr class="separator:a120006dd638bd98ad6c1ad11f8931d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0beeb124fb27e44e205e1ecfd6df46f1"><td class="memItemLeft" align="right" valign="top"><a id="a0beeb124fb27e44e205e1ecfd6df46f1" name="a0beeb124fb27e44e205e1ecfd6df46f1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>ncols</b></td></tr>
+<tr class="separator:a0beeb124fb27e44e205e1ecfd6df46f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Matrix structure that simulates a 2d matrix accessed by A(row, col). </p>
+<p >The Matrix structure contains valuable information about the number of rows and number of columns stored in order to perform necessary logistic checks at execution time. For example, two matrices can be added to each other if and only if they are the same size; * </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>inc/<a class="el" href="ejovo__comp__matrix_8h_source.html">ejovo_comp_matrix.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -68,6 +68,11 @@ $(function() {
   <div class="headertitle"><div class="title">mat_col_iterator_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A C++ style iterator that iterates along a Matrix's column.  
+ <a href="structmat__col__iterator__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ejovo__matrix_8h_source.html">ejovo_matrix.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -78,7 +83,18 @@ MATRIX_TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b></td>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>ncols</b></td></tr>
 <tr class="separator:a8f39935e38571fbc82e5efcfa41e8c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A C++ style iterator that iterates along a Matrix's column. </p>
+<p >A ColIter contains minimal information that allows it to access the proper memory locations in an iterative fashion that correspond to the column that was selected of a parent matrix.</p>
+<p >For example: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structmat__t.html">Matrix</a> *m = <a class="code hl_function" href="ejovo__matrix_8h.html#a55d939aa33067e903df770a73f8442c4">Matrix_new</a>(10, 10);</div>
+<div class="line"><a class="code hl_struct" href="structmat__col__iterator__t.html">ColIter</a> *begin = Matrix_col_begin(m, 2) <span class="comment">// Create the begining iterator that points</span></div>
+<div class="line">                                        <span class="comment">// to the first element in m&#39;s third column</span></div>
+<div class="line"><a class="code hl_struct" href="structmat__col__iterator__t.html">ColIter</a> *end = Matrix_col_end(m, 5);</div>
+<div class="ttc" id="aejovo__matrix_8h_html_a55d939aa33067e903df770a73f8442c4"><div class="ttname"><a href="ejovo__matrix_8h.html#a55d939aa33067e903df770a73f8442c4">Matrix_new</a></div><div class="ttdeci">Matrix * Matrix_new(int __nrows, int __ncols)</div></div>
+<div class="ttc" id="astructmat__col__iterator__t_html"><div class="ttname"><a href="structmat__col__iterator__t.html">mat_col_iterator_t</a></div><div class="ttdoc">A C++ style iterator that iterates along a Matrix's column.</div><div class="ttdef"><b>Definition:</b> ejovo_matrix.h:64</div></div>
+<div class="ttc" id="astructmat__t_html"><div class="ttname"><a href="structmat__t.html">mat_t</a></div><div class="ttdoc">Matrix structure that simulates a 2d matrix accessed by A(row, col).</div><div class="ttdef"><b>Definition:</b> ejovo_matrix.h:37</div></div>
+</div><!-- fragment --><p >We can use <code>ColIter</code>s to compute the norm of a column more effectively For example, the function <code>Matrix_col_norm</code> makes use of <code>ColIter</code>s </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>inc/<a class="el" href="ejovo__matrix_8h_source.html">ejovo_matrix.h</a></li>
 </ul>
 </div><!-- contents -->
