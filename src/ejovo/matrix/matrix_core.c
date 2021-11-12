@@ -33,7 +33,7 @@ void Matrix_free(Matrix *__A) {
 
 // Copy the bytes
 // this is a utility function and should not be used by the end user
-static bool matcpy(Matrix *restrict __dest, const Matrix *restrict __src) {
+bool matcpy(Matrix *__dest, const Matrix *__src) {
 
     // Copy the bytes of __src->data into __dest->data
     memcpy(__dest->data, __src->data, sizeof(MATRIX_TYPE)*(__src->nrows * __src->ncols));
@@ -47,7 +47,7 @@ static bool matcpy(Matrix *restrict __dest, const Matrix *restrict __src) {
 }
 
 // copy the contents of matrix __src into __dest
-Matrix * matclone(const Matrix *restrict __src) {
+Matrix * matclone(const Matrix *__src) {
 
     Matrix * clone = NULL;
 
@@ -132,7 +132,7 @@ Matrix *Matrix_rowvec(const MATRIX_TYPE *__arr, size_t __ncols) {
     return Matrix_from(__arr, 1, __ncols);
 }
 
-Matrix * Matrix_clone(const Matrix *restrict __src) {
+Matrix * Matrix_clone(const Matrix *__src) {
     return matclone(__src);
 }
 
@@ -143,7 +143,6 @@ Matrix * Matrix_ones(size_t __nrows, size_t __ncols) {
     matfill(m, 1);
 
     return m;
-
 }
 
 Matrix * Matrix_ij(size_t __nrows, size_t __ncols) {
@@ -158,7 +157,6 @@ Matrix * Matrix_ij(size_t __nrows, size_t __ncols) {
     }
 
     return m;
-
 }
 
 Matrix * Matrix_value(size_t __nrows, size_t __ncols, MATRIX_TYPE __value) {
@@ -181,7 +179,6 @@ Matrix * Matrix_random(size_t __nrows, size_t __ncols, int __min, int __max) {
     }
 
     return m;
-
 }
 
 Matrix * Matrix_rand(size_t __nrows, size_t __ncols) {
@@ -197,7 +194,6 @@ Matrix * Matrix_identity(size_t __n) {
     }
 
     return m;
-
 }
 
 /**================================================================================================

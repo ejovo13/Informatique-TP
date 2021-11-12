@@ -35,7 +35,7 @@
  * For example, two matrices can be added to each other if and only if they are the same size; *
  */
 typedef struct mat_t {
-    MATRIX_TYPE *restrict data; // SUPER IMPORTANT!!! I am declaring that the underlying data
+    MATRIX_TYPE *data; // SUPER IMPORTANT!!! I am declaring that the underlying data
                                 // is only ever accessed by one pointer! In terms of Rust,
                                 // data is the only owner of the matrix elements
     size_t nrows;
@@ -86,10 +86,51 @@ typedef void (* EDITOR) (MATRIX_TYPE *); // A function that will modify the poin
 typedef void (* EDITOR_2) (MATRIX_TYPE *, MATRIX_TYPE *); // A function that will modify the pointer foreach element
 typedef void (* EDITOR_K) (MATRIX_TYPE *, MATRIX_TYPE); // A function that will modify the pointer foreach element
 
+/**================================================================================================
+ *!                                        matrix_compute.c
+ *================================================================================================**/
+/**
+ * @brief Compute the fixed-fixed matrix K
+ *
+ * This Matrix is studied in Gilbert Strang's Computational Science and Engineering textbook
+ * @param size_t __n size of the square matrix K to return
+ * @return Matrix *K
+ */
+extern Matrix *Matrix_K(size_t __n);
+
+/**
+ * @brief Compute the circularly connected matrix C
+ *
+ * This Matrix is studied in Gilbert Strang's Computational Science and Engineering textbook
+ * @param size_t __n size of the square matrix C to return
+ * @return Matrix *C
+ */
+extern Matrix *Matrix_C(size_t __n);
+
+/**
+ * @brief Compute the fixed-free matrix T
+ *
+ * This Matrix is studied in Gilbert Strang's Computational Science and Engineering textbook
+ * @param size_t __n size of the square matrix T to return
+ * @return Matrix *T
+ */
+extern Matrix *Matrix_T(size_t __n);
+
+/**
+ * @brief Compute the free-fixed matrix B
+ *
+ * This Matrix is studied in Gilbert Strang's Computational Science and Engineering textbook
+ * @param size_t __n size of the square matrix B to return
+ * @return Matrix *B
+ */
+extern Matrix *Matrix_B(size_t __n);
 
 /**================================================================================================
  *!                                       matrix_core.c
  *================================================================================================**/
+/**============================================
+ *!               Memory and allocation
+ *=============================================**/
 /**
  * @private
  * Allocate the space for a new matrix object, performing no checks
@@ -98,6 +139,39 @@ typedef void (* EDITOR_K) (MATRIX_TYPE *, MATRIX_TYPE); // A function that will 
  */
 extern Matrix *matalloc(size_t __nrows, size_t __ncols);
 
+/**
+ * @private
+ * Free a matrix pointer without checking it it's null
+ *
+ */
+extern void matfree(Matrix *__A);
+
+/**
+ * Free the memory associated with the matrix and then free the pointer itself
+ *
+ *
+ */
+extern void Matrix_free(Matrix *__A);
+
+/**
+ * @brief copy the bytes of the data matrix from __src into __dest
+ * @private
+ *
+ * @param __dest
+ * @param __src
+ * @return true when all of the pointers involved in the copy are not null
+ * @return false
+ */
+extern bool matcpy(Matrix *__dest, const Matrix *__src);
+
+/** @private
+ *  copy the contents of matrix __src into __dest by calling matcpy
+ */
+extern Matrix * matclone(const Matrix *__src);
+
+/**============================================
+ *!               Matrix Constructors
+ *=============================================**/
 /**
  * Create a new __nrows x __ncols Matrix filled with zeros
  *
@@ -137,11 +211,185 @@ extern Matrix *Matrix_colvec(const MATRIX_TYPE *__arr, size_t __nrows);
 extern Matrix *Matrix_rowvec(const MATRIX_TYPE *__arr, size_t __ncols);
 
 /**
- * Free the memory associated with the matrix and then free the pointer itself
+ * Create a new Matrix from the contents of __src
  *
+ * @return A Matrix with the same size and shape as `__src` and the same exact elements.
+ * This is a clone operation and thus new data is allocated for the returned Matrix.
  *
  */
-extern void Matrix_free(Matrix *__A);
+extern Matrix * Matrix_clone(const Matrix *__src);
+
+// Return specific matrix types
+/**
+ * Return a matrix of all 1's
+ */
+extern Matrix * Matrix_ones(size_t __nrows, size_t __ncols);
+
+/**
+ *  Matrix whose elements are i + j (starting with i,j = 1)
+ */
+extern Matrix * Matrix_ij(size_t __nrows, size_t __ncols);
+
+/**
+ *  Fill a `__nrows` by `__ncols` Matrix with a uniform random variable ~ [`__min`, `__max`]
+ *
+ */
+extern Matrix * Matrix_random(size_t __nrows, size_t __ncols, int __min, int __max);
+
+/**
+ * Fill a `__nrows` by `__ncols` Matrix with a uniform random variable ~ [0, 100]
+ */
+extern Matrix * Matrix_rand(size_t __nrows, size_t __ncols);
+
+/**
+ * @brief Return a square identity matrix (1 along the diagonal) of size n
+ *
+ * @param __n
+ * @return Matrix* __n x __n identity matrix
+ */
+extern Matrix *Matrix_identity(size_t __n);
+
+/**
+ *  Instantiate new matrix with the value filled in at every element
+ */
+extern Matrix * Matrix_value(size_t __nrows, size_t __ncols, MATRIX_TYPE __value);
+
+/**============================================
+ *!               Miscellaneous
+ *=============================================**/
+/**
+ * Print a matrix to stdout without checking the bounds
+ */
+extern void matprint(const Matrix *__m);
+
+/**
+ * Print a matrix to stdout
+ */
+extern void Matrix_print(const Matrix *__m);
+
+/**
+ * Print the size of a matrix to stdout
+ */
+extern void Matrix_summary(const Matrix *__m);
+
+/**================================================================================================
+ *!                                        matrix_foreach.c
+ *================================================================================================**/
+/**========================================================================
+ *!                           Single functions
+ *========================================================================**/
+/**
+ *  Underlying function used in a foreach_2 function pointer approach to
+ * iterating through the elements of a matrix.
+ */
+extern inline void add_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+
+/**
+ * @private
+ */
+extern inline void sub_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+
+/**
+ * @private
+ */
+extern inline void mult_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+
+/**
+ * @private
+ */
+extern inline void div_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+// MY FIRST EDITOR_K
+extern inline void multscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+
+extern inline void addscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+
+extern inline void divscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+
+extern inline void subscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+/**========================================================================
+ *!                           Foreach Loops
+ *========================================================================**/
+extern void Matrix_foreach(Matrix *__A, EDITOR __fnc);
+
+extern void Matrix_foreach_2(Matrix *__A, Matrix *__B, EDITOR_2 __fnc);
+
+extern void Matrix_foreach_k(Matrix *__A, EDITOR_K __fnc, MATRIX_TYPE __k);
+
+/**========================================================================
+ *!                           Single function + foreach loop
+ *========================================================================**/
+/**
+ * @private
+ */
+extern void matadd_foreach(Matrix *__A, const Matrix *__B);
+
+/**
+ * @private
+ */
+extern void matsub_foreach(Matrix *__A, const Matrix *__B);
+
+/**
+ * @private
+ */
+extern void matmult_foreach(Matrix *__A, const Matrix *__B);
+
+/**
+ * @private
+ */
+extern void matdiv_foreach(Matrix *__A, const Matrix *__B);
+
+extern void matmultscalar(Matrix *__A, const MATRIX_TYPE __k);
+
+extern void mataddscalar(Matrix *__A, const MATRIX_TYPE __k);
+
+extern void matdivscalar(Matrix *__A, const MATRIX_TYPE __k);
+
+extern void matsubscalar(Matrix *__A, const MATRIX_TYPE __k);
+
+extern MATRIX_TYPE matsum(const Matrix *__A);
+
+extern MATRIX_TYPE matmin(const Matrix *__A);
+
+extern MATRIX_TYPE matmax(const Matrix *__A);
+
+/**========================================================================
+ *!                           Matrix API foreach
+ *========================================================================**/
+
+extern Matrix *Matrix_mult_scalar(const Matrix *__A, const MATRIX_TYPE __k);
+
+extern Matrix *Matrix_add_scalar(const Matrix *__A, const MATRIX_TYPE __k);
+
+extern Matrix *Matrix_sub_scalar(const Matrix *__A, const MATRIX_TYPE __k);
+
+extern Matrix *Matrix_div_scalar(const Matrix *__A, const MATRIX_TYPE __k);
+
+/**========================================================================
+ *!                           Matrix Mask functions
+ *========================================================================**/
+// This mask API should allow me to set values according to a certain condition
+typedef bool (* Mask) (MATRIX_TYPE *); // A "Mask" is a pointer to a function that tests a condition
+                                       // based on the inputted element.
+                                       // Masks then can be used to only interact with data
+                                       // that fit a specific criterion
+
+/**
+ * Perform an operation on a matrix when a given mask evauates to true
+ */
+extern void Matrix_mask(Matrix *__A, Mask __mask, EDITOR __operator);
+
+extern void Matrix_mask_2(Matrix *__A, Matrix *__B, Mask __mask, EDITOR_2 __operator);
+
+extern void Matrix_mask_k(Matrix *__A, Mask __mask, EDITOR_K __operator, MATRIX_TYPE __k);
+
+/**================================================================================================
+ *!                                        matrix_getset.c
+ *================================================================================================**/
+
+
+
+
+
 
 /**
  * Check if the values of __i and __j are within the bounds of __m
@@ -195,22 +443,6 @@ extern MATRIX_TYPE *matacc(const Matrix *__m, size_t __i, size_t __j);
  */
 extern MATRIX_TYPE *matacc_check(const Matrix *__m, size_t __i, size_t __j);
 
-/**
- * Print a matrix to stdout
- */
-extern void Matrix_print(const Matrix *__m);
-
-/**
- * Print a matrix to stdout without checking the bounds
- */
-extern void matprint(const Matrix *__m);
-
-/**
- * Print the size of a matrix to stdout
- */
-extern void Matrix_summary(const Matrix *__m);
-
-
 // Take the inner product of the the __irow row of __A with the __icol col of __B
 // used as a subroutine called in matmul
 /** @private
@@ -256,21 +488,8 @@ extern bool Matrix_comp_mult(const Matrix *__A, const Matrix *__B);
 // this is a utility function and should not be used by the end user
 /** @private
  */
-// static bool matcpy(Matrix *restrict __dest, const Matrix *restrict __src);
+// static bool matcpy(Matrix *__dest, const Matrix *__src);
 
-/** @private
- *  copy the contents of matrix __src into __dest
- */
-extern Matrix * matclone(const Matrix *restrict __src);
-
-/**
- * Create a new Matrix from the contents of __src
- *
- * @return A Matrix with the same size and shape as `__src` and the same exact elements.
- * This is a clone operation and thus new data is allocated for the returned Matrix.
- *
- */
-extern Matrix * Matrix_clone(const Matrix *restrict __src);
 
 /** @private
  * Fortran named function to compute the multiplication of two matrices __A * __B
@@ -282,47 +501,6 @@ extern Matrix * matmul(const Matrix *__A, const Matrix *__B);
  * Multiply two matrices __A*__B.
  */
 extern Matrix * Matrix_multiply(const Matrix * __A, const Matrix * __B);
-
-/**
- *  Underlying function used in a foreach_2 function pointer approach to
- * iterating through the elements of a matrix.
- */
-extern void add_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
-
-/**
- * @private
- */
-extern void sub_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
-
-/**
- * @private
- */
-extern void mult_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
-
-/**
- * @private
- */
-extern void div_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
-
-/**
- * @private
- */
-extern void matadd_foreach(Matrix *__A, const Matrix *__B);
-
-/**
- * @private
- */
-extern void matsub_foreach(Matrix *__A, const Matrix *__B);
-
-/**
- * @private
- */
-extern void matmult_foreach(Matrix *__A, const Matrix *__B);
-
-/**
- * @private
- */
-extern void matdiv_foreach(Matrix *__A, const Matrix *__B);
 
 // IDEA!! MAKE THESE VARIADIC FUNCTIONS!!!
 /** @private
@@ -358,32 +536,7 @@ extern void Matrix_fill(Matrix *__A, const MATRIX_TYPE __value);
  */
 extern void matfill(Matrix *__A, const MATRIX_TYPE __value);
 
-/**
- *  Instantiate new matrix with the value filled in at every element
- */
-extern Matrix * Matrix_value(size_t __nrows, size_t __ncols, MATRIX_TYPE __value);
 
-// Return specific matrix types
-/**
- * Return a matrix of all 1's
- */
-extern Matrix * Matrix_ones(size_t __nrows, size_t __ncols);
-
-/**
- *  Matrix whose elements are i + j (starting with i,j = 1)
- */
-extern Matrix * Matrix_ij(size_t __nrows, size_t __ncols);
-
-/**
- *  Fill a `__nrows` by `__ncols` Matrix with a uniform random variable ~ [`__min`, `__max`]
- *
- */
-extern Matrix * Matrix_random(size_t __nrows, size_t __ncols, int __min, int __max);
-
-/**
- * Fill a `__nrows` by `__ncols` Matrix with a uniform random variable ~ [0, 100]
- */
-extern Matrix * Matrix_rand(size_t __nrows, size_t __ncols);
 
 // /** @private
 //  *
@@ -484,50 +637,14 @@ extern bool Matrix_is_col(const Matrix *__A);
 
 extern bool Matrix_is_vec(const Matrix *__A);
 
-extern Matrix *Matrix_K(size_t __n);
-
-extern Matrix *Matrix_C(size_t __n);
-
-extern Matrix *Matrix_T(size_t __n);
-
-extern Matrix *Matrix_B(size_t __n);
-
 extern void matsub(Matrix *__A, const Matrix *__B);
 
 extern Matrix *Matrix_subtract(const Matrix *__A, const Matrix *__B);
 
 extern Matrix *Matrix_subtract(const Matrix *__A, const Matrix *__B);
 
-extern void Matrix_foreach(Matrix *__A, EDITOR __fnc);
 
-extern void Matrix_foreach_2(Matrix *__A, Matrix *__B, EDITOR_2 __fnc);
 
-extern void Matrix_foreach_k(Matrix *__A, EDITOR_K __fnc, MATRIX_TYPE __k);
-
-extern void matmultscalar(Matrix *__A, const MATRIX_TYPE __k);
-
-extern void mataddscalar(Matrix *__A, const MATRIX_TYPE __k);
-
-extern void matdivscalar(Matrix *__A, const MATRIX_TYPE __k);
-
-extern void matsubscalar(Matrix *__A, const MATRIX_TYPE __k);
-
-// MY FIRST EDITOR_K
-extern void multscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
-
-extern void addscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
-
-extern void divscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
-
-extern void subscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
-
-extern Matrix *Matrix_mult_scalar(const Matrix *__A, const MATRIX_TYPE __k);
-
-extern Matrix *Matrix_add_scalar(const Matrix *__A, const MATRIX_TYPE __k);
-
-extern Matrix *Matrix_sub_scalar(const Matrix *__A, const MATRIX_TYPE __k);
-
-extern Matrix *Matrix_div_scalar(const Matrix *__A, const MATRIX_TYPE __k);
 
 
 extern MATRIX_TYPE vecpnorm(const Vector *__u, const int __p);
@@ -608,35 +725,12 @@ extern ColIter *Matrix_col_begin(const Matrix *__A, size_t __j);
 
 extern MATRIX_TYPE ColIter_value(const ColIter *__c);
 
-/**================================================================================================
- *!                                        Matrix Mask functions
- *================================================================================================**/
-// This mask API should allow me to set values according to a certain condition
-typedef bool (* Mask) (MATRIX_TYPE *); // A "Mask" is a pointer to a function that tests a condition
-                                       // based on the inputted element.
-                                       // Masks then can be used to only interact with data
-                                       // that fit a specific criterion
-
-/**
- * Perform an operation on a matrix when a given mask evauates to true
- */
-extern void Matrix_mask(Matrix *__A, Mask __mask, EDITOR __operator);
-
-extern void Matrix_fill_mask(Matrix *__A, Mask __mask, const MATRIX_TYPE __value);
-
-extern Matrix *Matrix_identity(size_t __n);
-
 extern MATRIX_TYPE Matrix_frobenius(const Matrix *__A);
 
 extern MATRIX_TYPE Vector_pnorm(const Vector *__u, const size_t __p);
 
 extern void setelement(MATRIX_TYPE *__el, const MATRIX_TYPE __value);
 
-extern MATRIX_TYPE matsum(const Matrix *__A);
-
-extern MATRIX_TYPE matmin(const Matrix *__A);
-
-extern MATRIX_TYPE matmax(const Matrix *__A);
 
 // extern MATRIX_TYPE ColIter_norm(ColIter *__c);
 
