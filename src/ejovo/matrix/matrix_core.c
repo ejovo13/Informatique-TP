@@ -215,14 +215,19 @@ void matprint(const Matrix *__m) {
 
 void Matrix_print(const Matrix *__m) {
 
-    Matrix_summary(__m);
-    for (size_t i = 0; i < __m->nrows; i++) {
-        printf("| ");
-        for (size_t j = 0; j < __m->ncols; j++) {
-            printf("%4.4lf ", Matrix_at(__m, i, j));
-        }
+    if(__m) {
 
-        printf("|\n");
+        Matrix_summary(__m);
+        for (size_t i = 0; i < __m->nrows; i++) {
+            printf("| ");
+            for (size_t j = 0; j < __m->ncols; j++) {
+                printf("%4.4lf ", Matrix_at(__m, i, j));
+            }
+
+            printf("|\n");
+        }
+    } else {
+        printf("Warning: Matrix pointer is null!\n");
     }
 }
 
