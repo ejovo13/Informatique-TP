@@ -4,6 +4,7 @@ set(MATRIX_TEST_SRC
     mat_getset
     mat_iter
     mat_lin
+    mat_compute
 
 
 

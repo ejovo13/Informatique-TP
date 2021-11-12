@@ -9,7 +9,10 @@
 // Tridiagonal K matrix
 Matrix *Matrix_K(size_t __n) {
 // assert that __n > 1
-    assert(__n > 1);
+    // assert(__n > 1);
+    if (__n <= 1) {
+        return NULL;
+    }
 
     Matrix *mat = Matrix_new(__n, __n);
     // set first row
@@ -35,7 +38,10 @@ Matrix *Matrix_K(size_t __n) {
 // Circular matrix
 Matrix *Matrix_C(size_t __n) {
 
-    assert(__n > 1);
+    // assert(__n > 1);
+    if (__n <= 1) {
+        return NULL;
+    }
 
     Matrix *mat = Matrix_K(__n);
     matset(mat, 0, __n - 1, -1); // set the top right value
@@ -47,7 +53,10 @@ Matrix *Matrix_C(size_t __n) {
 
 Matrix *Matrix_T(size_t __n) {
 
-    assert(__n > 1);
+    // assert(__n > 1);
+    if (__n <= 1) {
+        return NULL;
+    }
 
     Matrix *mat = Matrix_K(__n);
     matset(mat, 0, 0, 1);
@@ -58,7 +67,10 @@ Matrix *Matrix_T(size_t __n) {
 
 Matrix *Matrix_B(size_t __n) {
 
-    assert(__n > 1);
+    // assert(__n > 1);
+    if (__n <= 1) {
+        return NULL;
+    }
 
     Matrix *mat = Matrix_T(__n);
     matset(mat, __n - 1, __n - 1, 1);
