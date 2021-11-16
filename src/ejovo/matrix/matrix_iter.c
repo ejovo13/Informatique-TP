@@ -737,9 +737,9 @@ void RowIter_apply_add_iter_scaled(RowIter *__abegin, const RowIter *__aend, Row
 // matrix elementary row operation (add two rows)
 void matrowop_add(Matrix *__A, const size_t __r1, const size_t __r2, const size_t __col_offset) {
 
-    const RowIter *r1begin = matrowpos(__A, __r1, __col_offset);
-    const RowIter *r1end = matrowend(__A, __r1);
-    const RowIter *r2begin = matrowpos(__A, __r2, __col_offset);
+    RowIter *r1begin = matrowpos(__A, __r1, __col_offset);
+    RowIter *r1end = matrowend(__A, __r1);
+    RowIter *r2begin = matrowpos(__A, __r2, __col_offset);
 
     RowIter_apply_add_iter(r1begin, r1end, r2begin);
 
@@ -751,9 +751,9 @@ void matrowop_add(Matrix *__A, const size_t __r1, const size_t __r2, const size_
 // matrix elementary row operation (add two rows)
 void matrowop_add_scaled(Matrix *__A, const size_t __r1, const size_t __r2, const MATRIX_TYPE __k, const size_t __col_offset) {
 
-    const RowIter *r1begin = matrowpos(__A, __r1, __col_offset);
-    const RowIter *r1end = matrowend(__A, __r1);
-    const RowIter *r2begin = matrowpos(__A, __r2, __col_offset);
+    RowIter *r1begin = matrowpos(__A, __r1, __col_offset);
+    RowIter *r1end = matrowend(__A, __r1);
+    RowIter *r2begin = matrowpos(__A, __r2, __col_offset);
 
     RowIter_apply_add_iter_scaled(r1begin, r1end, r2begin, __k);
 

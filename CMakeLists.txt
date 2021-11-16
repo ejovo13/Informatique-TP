@@ -4,11 +4,25 @@ project(TP_ALL)
 enable_language(C)
 enable_testing(ON)
 
+set(C_STANDARD 11)
+
 set(INC ${CMAKE_SOURCE_DIR}/inc)
 set(SRC ${CMAKE_SOURCE_DIR}/src)
 set(TEST ${CMAKE_SOURCE_DIR}/test)
 set(BIN ${CMAKE_SOURCE_DIR}/bin)
 set(LIB ${CMAKE_SOURCE_DIR}/lib)
+
+add_compile_options(-pg)
+add_link_options(-pg)
+
+set (EJOVO_TIME ON)
+
+if (EJOVO_TIME)
+    add_compile_options(-fno-reorder-functions)
+    add_compile_options(-fgnu89-inline)
+    add_compile_options(-fno-inline)
+    add_compile_options(-O3)
+endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB})

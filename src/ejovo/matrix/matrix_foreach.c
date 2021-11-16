@@ -6,41 +6,24 @@
  *!                                        Single functions
  *================================================================================================**/
 
-// series of functions used to add two elements that Matrix_access pointers are pointing to
-inline void add_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
-    (*__a) += (*__b);
-}
+// // series of functions used to add two elements that Matrix_access pointers are pointing to
+// extern void add_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
 
-// I'm going to want to use this for computing the LU decomposition
-inline void sub_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
-    (*__a) -= (*__b);
-}
+// // I'm going to want to use this for computing the LU decomposition
+// extern void sub_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
 
-inline void mult_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
-    (*__a) *= (*__b);
-}
 
-inline void div_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
-    (*__a) /= (*__b);
-}
+// extern void mult_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
 
-//* Matrix times scalar
+// extern void div_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b); //* Matrix times scalar
 
-inline void multscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
-    (*__el) *= __k;
-}
+// extern void multscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
 
-inline void addscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
-    (*__el) += __k;
-}
+// extern void addscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
 
-inline void divscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
-    (*__el) /= __k;
-}
+// extern void divscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
 
-inline void subscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
-    (*__el) -= __k;
-}
+// extern void subscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
 
 /**================================================================================================
  *!                                        Foreach loops
@@ -224,3 +207,19 @@ void Matrix_mask_k(Matrix *__A, Mask __mask, EDITOR_K __operator, const MATRIX_T
         }
     }
 }
+
+// for loop version
+void matadd_for(Matrix *__A, const Matrix *__B) {
+
+    MATRIX_TYPE *a = NULL;
+    MATRIX_TYPE *b = NULL;
+
+    for( size_t i = 0; i < __A->nrows; i++) {
+        for (size_t j = 0; j < __A->ncols; j++) {
+            a = matacc(__A, i, j);
+            b = matacc(__B, i, j);
+            *a += *b;
+        }
+    }
+}
+

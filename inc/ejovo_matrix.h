@@ -282,30 +282,40 @@ extern void Matrix_summary(const Matrix *__m);
  *  Underlying function used in a foreach_2 function pointer approach to
  * iterating through the elements of a matrix.
  */
-extern inline void add_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+static inline void add_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
+    (*__a) += (*__b);
+}
 
-/**
- * @private
- */
-extern inline void sub_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+// I'm going to want to use this for computing the LU decomposition
+static inline void sub_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
+    (*__a) -= (*__b);
+}
 
-/**
- * @private
- */
-extern inline void mult_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
+static inline void mult_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
+    (*__a) *= (*__b);
+}
 
-/**
- * @private
- */
-extern inline void div_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b);
-// MY FIRST EDITOR_K
-extern inline void multscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+static inline void div_each(MATRIX_TYPE *__a, MATRIX_TYPE *__b) {
+    (*__a) /= (*__b);
+}
 
-extern inline void addscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+//* Matrix times scalar
 
-extern inline void divscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+static inline void multscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
+    (*__el) *= __k;
+}
 
-extern inline void subscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k);
+static inline void addscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
+    (*__el) += __k;
+}
+
+static inline void divscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
+    (*__el) /= __k;
+}
+
+static inline void subscalar(MATRIX_TYPE *__el, MATRIX_TYPE __k) {
+    (*__el) -= __k;
+}
 /**========================================================================
  *!                           Foreach Loops
  *========================================================================**/
@@ -1092,5 +1102,9 @@ extern void Matrix_rowop_add_offset(Matrix *__A, const size_t __r1, const size_t
 extern void matrowop_add_scaled(Matrix *__A, const size_t __r1, const size_t __r2, const MATRIX_TYPE __k, const size_t __col_offset);
 
 extern void Matrix_rowop_add_scaled(Matrix *__A, const size_t __r1, const size_t __r2, const MATRIX_TYPE __k);
+
+extern void Matrix_fill_mask(Matrix *__A, Mask __mask, const MATRIX_TYPE __value);
+
+extern void matadd_for(Matrix *__A, const Matrix *__B);
 
 #endif

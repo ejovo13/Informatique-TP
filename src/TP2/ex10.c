@@ -7,6 +7,8 @@
 
 // Function pointer that will allow me to fill a histogram with different random number generators
 typedef int (*RNG)(int, int);
+typedef void (*void_fn) (double, char);
+
 
 // Naive rng uses the modulo operator - very nooby and not very secure
 int naive_rng(int a, int b) {

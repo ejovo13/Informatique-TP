@@ -55,6 +55,7 @@ macro(ejovo_add_test TESTNAME)
 endmacro()
 
 add_subdirectory(matrix)
+add_subdirectory(benchmarks)
 
 
 
