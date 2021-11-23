@@ -108,6 +108,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a1ef22acb3a616e20e63e7a0246e5d476"><td class="memItemLeft" align="right" valign="top"><a id="a1ef22acb3a616e20e63e7a0246e5d476" name="a1ef22acb3a616e20e63e7a0246e5d476"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>MATRIX_TYPE</b>&#160;&#160;&#160;double</td></tr>
 <tr class="separator:a1ef22acb3a616e20e63e7a0246e5d476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b524a05658d2f772008124457b29a05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a0b524a05658d2f772008124457b29a05">MAX_STEP_SIZE</a>&#160;&#160;&#160;10000</td></tr>
+<tr class="memdesc:a0b524a05658d2f772008124457b29a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jacobi Iteration.  <a href="ejovo__matrix_8h.html#a0b524a05658d2f772008124457b29a05">More...</a><br /></td></tr>
+<tr class="separator:a0b524a05658d2f772008124457b29a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -171,6 +174,18 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>RowIterFn_i
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab81a5bd4f2861adc6402528231b54876"><td class="memItemLeft" align="right" valign="top"><a id="ab81a5bd4f2861adc6402528231b54876" name="ab81a5bd4f2861adc6402528231b54876"></a>
+<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_shallow_copy</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__rhs)</td></tr>
+<tr class="separator:ab81a5bd4f2861adc6402528231b54876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d58ef8eecbcb6d4bd6f3002e20b3f99"><td class="memItemLeft" align="right" valign="top"><a id="a6d58ef8eecbcb6d4bd6f3002e20b3f99" name="a6d58ef8eecbcb6d4bd6f3002e20b3f99"></a>
+<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_take</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__rhs)</td></tr>
+<tr class="separator:a6d58ef8eecbcb6d4bd6f3002e20b3f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1ab347589160fc169a0b3b30facec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a5f1ab347589160fc169a0b3b30facec3">Matrix_diagonal</a> (size_t __n)</td></tr>
+<tr class="memdesc:a5f1ab347589160fc169a0b3b30facec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a square diagonal matrix with random entries from 1 to 10.  <a href="ejovo__matrix_8h.html#a5f1ab347589160fc169a0b3b30facec3">More...</a><br /></td></tr>
+<tr class="separator:a5f1ab347589160fc169a0b3b30facec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e9a6f4182e0faee3b732b5423da8e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a26e9a6f4182e0faee3b732b5423da8e8">Matrix_tridiagonal</a> (size_t __n)</td></tr>
+<tr class="memdesc:a26e9a6f4182e0faee3b732b5423da8e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a square tridiagonal matrix with random entries from 1 to 10.  <a href="ejovo__matrix_8h.html#a26e9a6f4182e0faee3b732b5423da8e8">More...</a><br /></td></tr>
+<tr class="separator:a26e9a6f4182e0faee3b732b5423da8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55d939aa33067e903df770a73f8442c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a55d939aa33067e903df770a73f8442c4">Matrix_new</a> (int __nrows, int __ncols)</td></tr>
 <tr class="separator:a55d939aa33067e903df770a73f8442c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac948b9d9a73df90232874951400150eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ac948b9d9a73df90232874951400150eb">Matrix_move</a> (MATRIX_TYPE **__arr_ptr, size_t __nrows, size_t __ncols)</td></tr>
@@ -205,8 +220,8 @@ Functions</h2></td></tr>
 <tr class="separator:abdb492b1d6e4e91c80c33784215fd386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a314787a3f5c3e043dfec744b556c76b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a314787a3f5c3e043dfec744b556c76b9">Matrix_summary</a> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__m)</td></tr>
 <tr class="separator:a314787a3f5c3e043dfec744b556c76b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f4f14b196eddfd8fe3820920a6ec4d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a6f4f14b196eddfd8fe3820920a6ec4d1">Matrix_clone</a> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *restrict __src)</td></tr>
-<tr class="separator:a6f4f14b196eddfd8fe3820920a6ec4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd2c96c4896c7d1bd2555da96cda3da9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#afd2c96c4896c7d1bd2555da96cda3da9">Matrix_clone</a> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__src)</td></tr>
+<tr class="separator:afd2c96c4896c7d1bd2555da96cda3da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9569fe9602bdde1f1a9a1e969134259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ab9569fe9602bdde1f1a9a1e969134259">Matrix_multiply</a> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__B)</td></tr>
 <tr class="separator:ab9569fe9602bdde1f1a9a1e969134259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b359d02bcf074146390c512be23000"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a56b359d02bcf074146390c512be23000">add_each</a> (MATRIX_TYPE *__a, MATRIX_TYPE *__b)</td></tr>
@@ -378,7 +393,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_normalize_cols
 <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>gausselim</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__B)</td></tr>
 <tr class="separator:acb9a987b86a9aea0f11f8e4af2972d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0865f32098d7b526c120f4e46c61b55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ae0865f32098d7b526c120f4e46c61b55">Vector_new</a> (size_t __nrows)</td></tr>
+<tr class="memdesc:ae0865f32098d7b526c120f4e46c61b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new column vector with size __nrows.  <a href="ejovo__matrix_8h.html#ae0865f32098d7b526c120f4e46c61b55">More...</a><br /></td></tr>
 <tr class="separator:ae0865f32098d7b526c120f4e46c61b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187873077730fb5ae4384b5dd34df139"><td class="memItemLeft" align="right" valign="top"><a id="a187873077730fb5ae4384b5dd34df139" name="a187873077730fb5ae4384b5dd34df139"></a>
+MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_at</b> (const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__v, size_t __i)</td></tr>
+<tr class="separator:a187873077730fb5ae4384b5dd34df139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd18bff473e68d47ae74656c6c05ff9"><td class="memItemLeft" align="right" valign="top"><a id="a7dd18bff473e68d47ae74656c6c05ff9" name="a7dd18bff473e68d47ae74656c6c05ff9"></a>
+MATRIX_TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_access</b> (const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__v, size_t __i)</td></tr>
+<tr class="separator:a7dd18bff473e68d47ae74656c6c05ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad791e3508696726659b7a4866448b68d"><td class="memItemLeft" align="right" valign="top"><a id="ad791e3508696726659b7a4866448b68d" name="ad791e3508696726659b7a4866448b68d"></a>
 <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_rand</b> (size_t __nrows)</td></tr>
 <tr class="separator:ad791e3508696726659b7a4866448b68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -454,12 +476,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>matswap</b> (MATRIX_T
 <tr class="separator:a12a8330a13d645282bd48ebfa12e3ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43d81e1f80af42bf66b1c2d56ed4b63a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a43d81e1f80af42bf66b1c2d56ed4b63a">Matrix_rect_limit</a> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A)</td></tr>
 <tr class="separator:a43d81e1f80af42bf66b1c2d56ed4b63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e961f1057d5298f63c7ce321f64bf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#af9e961f1057d5298f63c7ce321f64bf5">Matrix_solve_lu</a> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__b)</td></tr>
+<tr class="separator:af9e961f1057d5298f63c7ce321f64bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de682469901be9fb0533440b515641a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#a3de682469901be9fb0533440b515641a">Vector_size</a> (const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__v)</td></tr>
+<tr class="memdesc:a3de682469901be9fb0533440b515641a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of a vector.  <a href="ejovo__matrix_8h.html#a3de682469901be9fb0533440b515641a">More...</a><br /></td></tr>
+<tr class="separator:a3de682469901be9fb0533440b515641a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab54e69a0aa92ce1a4ff56628a17344ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ab54e69a0aa92ce1a4ff56628a17344ca">matlu_nopivot</a> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A)</td></tr>
 <tr class="memdesc:ab54e69a0aa92ce1a4ff56628a17344ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the LU decomposition of __A.  <a href="ejovo__matrix_8h.html#ab54e69a0aa92ce1a4ff56628a17344ca">More...</a><br /></td></tr>
 <tr class="separator:ab54e69a0aa92ce1a4ff56628a17344ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c6ad8d4f89b9240274af94bfd555ef8"><td class="memItemLeft" align="right" valign="top"><a id="a5c6ad8d4f89b9240274af94bfd555ef8" name="a5c6ad8d4f89b9240274af94bfd555ef8"></a>
 <a class="el" href="ejovo__matrix_8h.html#a2eee357395ec799e59d9b4ca7f5bb300">LU</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_lu</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A)</td></tr>
 <tr class="separator:a5c6ad8d4f89b9240274af94bfd555ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4187196ccda4cfeee1153569dedb884d"><td class="memItemLeft" align="right" valign="top"><a id="a4187196ccda4cfeee1153569dedb884d" name="a4187196ccda4cfeee1153569dedb884d"></a>
+<a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>jacobi_iteration</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__b, const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__x0, MATRIX_TYPE __crit)</td></tr>
+<tr class="separator:a4187196ccda4cfeee1153569dedb884d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6992799b618681f50795b939d73d284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmat__row__iterator__t.html">RowIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ac6992799b618681f50795b939d73d284">RowIter_new</a> (MATRIX_TYPE *__ptr, size_t __ptr_diff)</td></tr>
 <tr class="separator:ac6992799b618681f50795b939d73d284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd221fc7e045ae92b4a88b410b0acab1"><td class="memItemLeft" align="right" valign="top"><a id="acd221fc7e045ae92b4a88b410b0acab1" name="acd221fc7e045ae92b4a88b410b0acab1"></a>
@@ -770,6 +800,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RowIter_apply_mult_it
 <tr class="memitem:a2c084ceee3a4c3dac0d08898c269c1c3"><td class="memItemLeft" align="right" valign="top"><a id="a2c084ceee3a4c3dac0d08898c269c1c3" name="a2c084ceee3a4c3dac0d08898c269c1c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RowIter_apply_div_iter</b> (<a class="el" href="structmat__row__iterator__t.html">RowIter</a> *__abegin, const <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *__aend, <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *__bbegin)</td></tr>
 <tr class="separator:a2c084ceee3a4c3dac0d08898c269c1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7333d0e5767e42cecb4b2a8ce2ceef2"><td class="memItemLeft" align="right" valign="top">MATRIX_TYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ejovo__matrix_8h.html#ae7333d0e5767e42cecb4b2a8ce2ceef2">Iter_dot</a> (const <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *__r, const <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *__rend, const <a class="el" href="ejovo__matrix_8h.html#a9bd7945c840bba3d9bf7f7d8a67e19f4">ColIter</a> *__c)</td></tr>
+<tr class="memdesc:ae7333d0e5767e42cecb4b2a8ce2ceef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the dot product of a RowIter and a ColIter.  <a href="ejovo__matrix_8h.html#ae7333d0e5767e42cecb4b2a8ce2ceef2">More...</a><br /></td></tr>
+<tr class="separator:ae7333d0e5767e42cecb4b2a8ce2ceef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a327ba25e7ab3eace1a46d59d7a6d4b95"><td class="memItemLeft" align="right" valign="top"><a id="a327ba25e7ab3eace1a46d59d7a6d4b95" name="a327ba25e7ab3eace1a46d59d7a6d4b95"></a>
 <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>matrowbegin</b> (const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, size_t __i)</td></tr>
 <tr class="separator:a327ba25e7ab3eace1a46d59d7a6d4b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,13 +830,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>matrowop_add_scaled</
 <tr class="memitem:aa20f1118aaa712a091336a5809f2ea10"><td class="memItemLeft" align="right" valign="top"><a id="aa20f1118aaa712a091336a5809f2ea10" name="aa20f1118aaa712a091336a5809f2ea10"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scaled</b> (<a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *__A, const size_t __r1, const size_t __r2, const MATRIX_TYPE __k)</td></tr>
 <tr class="separator:aa20f1118aaa712a091336a5809f2ea10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459466cd6fb3207715a9c5f1746ea236"><td class="memItemLeft" align="right" valign="top"><a id="a459466cd6fb3207715a9c5f1746ea236" name="a459466cd6fb3207715a9c5f1746ea236"></a>
+<a class="el" href="ejovo__matrix_8h.html#a9bd7945c840bba3d9bf7f7d8a67e19f4">ColIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_col</b> (const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__v)</td></tr>
+<tr class="separator:a459466cd6fb3207715a9c5f1746ea236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d06cce5efced06d27e6a328e5b353fd"><td class="memItemLeft" align="right" valign="top"><a id="a5d06cce5efced06d27e6a328e5b353fd" name="a5d06cce5efced06d27e6a328e5b353fd"></a>
+<a class="el" href="structmat__row__iterator__t.html">RowIter</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Vector_row</b> (const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *__v)</td></tr>
+<tr class="separator:a5d06cce5efced06d27e6a328e5b353fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Implement a Matrix framework for performing basic Linear Algebra tasks. </p>
 <p >In order to tackle the exercises prescribed in TP4, I decided to create a matrix framework to make my life easier when writing the matrix multiplication and determinant finding routines.</p>
 <dl class="section author"><dt>Author</dt><dd>Evan Voyles </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>16 October 2021 </dd></dl>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0b524a05658d2f772008124457b29a05" name="a0b524a05658d2f772008124457b29a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b524a05658d2f772008124457b29a05">&#9670;&nbsp;</a></span>MAX_STEP_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_STEP_SIZE&#160;&#160;&#160;10000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Jacobi Iteration. </p>
+<p >Jacobi iteration consists of solving for the diagonals (x_i) of each equation (the rows of A) when given the equation Ax = b to solve.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__A</td><td>an Invertible matrix </td></tr>
+    <tr><td class="paramname">__b</td><td>a column or row Vector </td></tr>
+    <tr><td class="paramname">__x0</td><td>Initial guess of the solution </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>Attention</dt><dd>The parameter __b will be treated exclusively as a col vector to resolve the equation Ax = b, where x and b are column vectors</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a newly allocated vector </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
 <a id="a9bd7945c840bba3d9bf7f7d8a67e19f4" name="a9bd7945c840bba3d9bf7f7d8a67e19f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9bd7945c840bba3d9bf7f7d8a67e19f4">&#9670;&nbsp;</a></span>ColIter</h2>
 
@@ -965,7 +1032,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
 </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 !                                        Experimental APPLY functions</h1>
 
 </div>
@@ -1002,7 +1069,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >====================== </p>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 !    Iterator operations</h1>
 
 </div>
@@ -1039,10 +1106,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 !                                        Col manipulations using apply functions</h1>
 <p >====================== </p>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 !    Scalar operations</h1>
 
 </div>
@@ -1079,7 +1146,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >====================== </p>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 !    Pointer operations</h1>
 
 </div>
@@ -1124,7 +1191,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
 </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 !                                        ColIter basic utility routines - COLUMN</h1>
 
 </div>
@@ -1157,6 +1224,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
 <p >================================================================================================ </p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 !                                        ColIter functions</h1>
+
+</div>
+</div>
+<a id="ae7333d0e5767e42cecb4b2a8ce2ceef2" name="ae7333d0e5767e42cecb4b2a8ce2ceef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7333d0e5767e42cecb4b2a8ce2ceef2">&#9670;&nbsp;</a></span>Iter_dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MATRIX_TYPE Iter_dot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *&#160;</td>
+          <td class="paramname"><em>__r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmat__row__iterator__t.html">RowIter</a> *&#160;</td>
+          <td class="paramname"><em>__rend</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="ejovo__matrix_8h.html#a9bd7945c840bba3d9bf7f7d8a67e19f4">ColIter</a> *&#160;</td>
+          <td class="paramname"><em>__c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute the dot product of a RowIter and a ColIter. </p>
+<p >This corresponds to the vector inner product &lt; __u , __v &gt;</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__r</td><td></td></tr>
+    <tr><td class="paramname">__c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MATRIX_TYPE </dd></dl>
 
 </div>
 </div>
@@ -1311,9 +1423,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
 </div><div class="memdoc">
 
 <p>Compute the LU decomposition of __A. </p>
-<p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md6"></a>
-!                                        matrix_linear.c</h1>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">__A</td><td>This low level routine modifies __A in place to yield the Upper triangular matrix U </td></tr>
@@ -1472,8 +1581,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
 
 </div>
 </div>
-<a id="a6f4f14b196eddfd8fe3820920a6ec4d1" name="a6f4f14b196eddfd8fe3820920a6ec4d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f4f14b196eddfd8fe3820920a6ec4d1">&#9670;&nbsp;</a></span>Matrix_clone()</h2>
+<a id="afd2c96c4896c7d1bd2555da96cda3da9" name="afd2c96c4896c7d1bd2555da96cda3da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd2c96c4896c7d1bd2555da96cda3da9">&#9670;&nbsp;</a></span>Matrix_clone()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1481,7 +1590,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
         <tr>
           <td class="memname"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> * Matrix_clone </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *restrict&#160;</td>
+          <td class="paramtype">const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td>
           <td class="paramname"><em>__src</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1537,6 +1646,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >Recursive algorithm to compute the determinant of a matrix </p>
+
+</div>
+</div>
+<a id="a5f1ab347589160fc169a0b3b30facec3" name="a5f1ab347589160fc169a0b3b30facec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1ab347589160fc169a0b3b30facec3">&#9670;&nbsp;</a></span>Matrix_diagonal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> * Matrix_diagonal </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>__n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a square diagonal matrix with random entries from 1 to 10. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matrix* </dd></dl>
 
 </div>
 </div>
@@ -2265,6 +2401,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
 
 </div>
 </div>
+<a id="af9e961f1057d5298f63c7ce321f64bf5" name="af9e961f1057d5298f63c7ce321f64bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9e961f1057d5298f63c7ce321f64bf5">&#9670;&nbsp;</a></span>Matrix_solve_lu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> * Matrix_solve_lu </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> *&#160;</td>
+          <td class="paramname"><em>__A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *&#160;</td>
+          <td class="paramname"><em>__b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >================================================================================================ </p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+!                                        matrix_linear.c</h1>
+
+</div>
+</div>
 <a id="ad88afda52418f90d609f0cae86827f7e" name="ad88afda52418f90d609f0cae86827f7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad88afda52418f90d609f0cae86827f7e">&#9670;&nbsp;</a></span>Matrix_submat()</h2>
 
@@ -2328,6 +2495,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >Print the size of a matrix to stdout </p>
+
+</div>
+</div>
+<a id="a26e9a6f4182e0faee3b732b5423da8e8" name="a26e9a6f4182e0faee3b732b5423da8e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e9a6f4182e0faee3b732b5423da8e8">&#9670;&nbsp;</a></span>Matrix_tridiagonal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ejovo__matrix_8h.html#a1249a06feae557679b40c8b6d0fed297">Matrix</a> * Matrix_tridiagonal </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>__n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a square tridiagonal matrix with random entries from 1 to 10. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Matrix* </dd></dl>
 
 </div>
 </div>
@@ -2475,7 +2669,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 !                                        Experimental APPLY functions</h1>
 
 </div>
@@ -2512,7 +2706,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >====================== </p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 !    Iterator operations</h1>
 
 </div>
@@ -2549,10 +2743,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 !                                        Row manipulations using apply functions</h1>
 <p >====================== </p>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 !    Scalar operations</h1>
 
 </div>
@@ -2589,7 +2783,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >====================== </p>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 !    Pointer operations</h1>
 
 </div>
@@ -2620,7 +2814,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 !                                        matrix_iter.c</h1>
 
 </div>
@@ -2657,7 +2851,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
       </table>
 </div><div class="memdoc">
 <p >================================================================================================ </p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 !                                        RowIter basic utility routines - ROW</h1>
 
 </div>
@@ -2677,9 +2871,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix_rowop_add_scal
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create a new column vector with size __nrows. </p>
 <p >================================================================================================ </p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 !                                        Vector declarations</h1>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__nrows</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector* </dd></dl>
+
+</div>
+</div>
+<a id="a3de682469901be9fb0533440b515641a" name="a3de682469901be9fb0533440b515641a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de682469901be9fb0533440b515641a">&#9670;&nbsp;</a></span>Vector_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Vector_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c">Vector</a> *&#160;</td>
+          <td class="paramname"><em>__v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the size of a vector. </p>
+<p >======================================================================== </p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+!                           Constructors</h1>
+<p >======================================================================== </p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+!                           State Functions</h1>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__v</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
 
 </div>
 </div>
