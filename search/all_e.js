@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['xor_5frng_0',['xor_rng',['../ejovo__rand_8h.html#ad7c04ebd61669e043aab507852c174f6',1,'ejovo_rand.h']]],
-  ['xoshiro256ss_1',['xoshiro256ss',['../ejovo__rand_8h.html#aa8c33e5420596f7a1903881d679c0d1d',1,'ejovo_rand.h']]],
-  ['xoshiro256ss_5fstate_2',['xoshiro256ss_state',['../structxoshiro256ss__state.html',1,'']]]
+  ['vector_0',['Vector',['../ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c',1,'ejovo_matrix.h']]],
+  ['vector_5fnew_1',['Vector_new',['../ejovo__matrix_8h.html#ae0865f32098d7b526c120f4e46c61b55',1,'ejovo_matrix.h']]],
+  ['vector_5fsize_2',['Vector_size',['../ejovo__matrix_8h.html#a3de682469901be9fb0533440b515641a',1,'ejovo_matrix.h']]]
 ];
