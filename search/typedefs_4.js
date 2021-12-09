@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xor_5frng_0',['xor_rng',['../ejovo__rand_8h.html#ad7c04ebd61669e043aab507852c174f6',1,'ejovo_rand.h']]]
+  ['vector_0',['Vector',['../ejovo__matrix_8h.html#ad15cb404741731a7e99a689646d9628c',1,'ejovo_matrix.h']]]
 ];

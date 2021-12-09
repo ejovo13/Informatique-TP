@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['labyrinth_5fpiece_5ft_0',['labyrinth_piece_t',['../structlabyrinth__piece__t.html',1,'']]],
-  ['ldu_5ft_1',['ldu_t',['../structldu__t.html',1,'']]],
-  ['list_5ft_2',['list_t',['../structlist__t.html',1,'']]],
-  ['lu_3',['LU',['../ejovo__matrix_8h.html#a2eee357395ec799e59d9b4ca7f5bb300',1,'ejovo_matrix.h']]],
-  ['lu_5ft_4',['lu_t',['../structlu__t.html',1,'']]],
-  ['lup_5ft_5',['lup_t',['../structlup__t.html',1,'']]]
+  ['int_5fto_5fstring_0',['int_to_string',['../ejovo__string_8h.html#ad146138d67a489cc91dd4d4944b1bf81',1,'ejovo_string.h']]],
+  ['is_5fsubstr_1',['is_substr',['../ejovo__string_8h.html#a879a31660fb071f1b174b84d59213b72',1,'ejovo_string.h']]],
+  ['iter_5fdot_2',['Iter_dot',['../ejovo__matrix_8h.html#ae7333d0e5767e42cecb4b2a8ce2ceef2',1,'ejovo_matrix.h']]]
 ];

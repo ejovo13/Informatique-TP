@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lu_0',['LU',['../ejovo__matrix_8h.html#a2eee357395ec799e59d9b4ca7f5bb300',1,'ejovo_matrix.h']]]
+  ['function_0',['function',['../ejovo__matrix_8h.html#a146e851b1e1224e2e427cc99ccd2fbb5',1,'ejovo_matrix.h']]]
 ];

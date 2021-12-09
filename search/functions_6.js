@@ -12,7 +12,7 @@ var searchData=
   ['matrix_5fccat_9',['Matrix_ccat',['../ejovo__comp__matrix_8h.html#a0cbf88f986004404a4e258f41fff643f',1,'Matrix_ccat(Matrix *__A, Matrix *__B):&#160;ejovo_comp_matrix.h'],['../ejovo__matrix_8h.html#a0cbf88f986004404a4e258f41fff643f',1,'Matrix_ccat(Matrix *__A, Matrix *__B):&#160;ejovo_matrix.h']]],
   ['matrix_5fclone_10',['Matrix_clone',['../ejovo__matrix_8h.html#afd2c96c4896c7d1bd2555da96cda3da9',1,'ejovo_matrix.h']]],
   ['matrix_5fcolvec_11',['Matrix_colvec',['../ejovo__matrix_8h.html#ae0b008550b7b52dbabdc528ec1060ba6',1,'ejovo_matrix.h']]],
-  ['matrix_5fdet_12',['Matrix_det',['../ejovo__matrix_8h.html#abf7862e29ba7b198b9e8c8da93204658',1,'Matrix_det(Matrix *__A):&#160;ejovo_matrix.h'],['../ejovo__comp__matrix_8h.html#abf7862e29ba7b198b9e8c8da93204658',1,'Matrix_det(Matrix *__A):&#160;ejovo_comp_matrix.h']]],
+  ['matrix_5fdet_12',['Matrix_det',['../ejovo__matrix_8h.html#aebc36c46d2a8e226710563856191b679',1,'Matrix_det(const Matrix *__A):&#160;ejovo_matrix.h'],['../ejovo__comp__matrix_8h.html#abf7862e29ba7b198b9e8c8da93204658',1,'Matrix_det(Matrix *__A):&#160;ejovo_comp_matrix.h']]],
   ['matrix_5fdiagonal_13',['Matrix_diagonal',['../ejovo__matrix_8h.html#a5f1ab347589160fc169a0b3b30facec3',1,'ejovo_matrix.h']]],
   ['matrix_5ffill_14',['Matrix_fill',['../ejovo__matrix_8h.html#af1984e77038187139caf3609c661c6dc',1,'ejovo_matrix.h']]],
   ['matrix_5ffree_15',['Matrix_free',['../ejovo__matrix_8h.html#a33edffb8f530e4e7d3a7f7d97cb591da',1,'ejovo_matrix.h']]],
