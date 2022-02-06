@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['function_0',['function',['../ejovo__matrix_8h.html#a146e851b1e1224e2e427cc99ccd2fbb5',1,'ejovo_matrix.h']]]
+  ['int_5fto_5fstring_0',['int_to_string',['../ejovo__string_8h.html#ad146138d67a489cc91dd4d4944b1bf81',1,'ejovo_string.h']]],
+  ['is_5fsubstr_1',['is_substr',['../ejovo__string_8h.html#a879a31660fb071f1b174b84d59213b72',1,'ejovo_string.h']]]
 ];

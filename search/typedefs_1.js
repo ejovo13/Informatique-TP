@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['function_0',['function',['../ejovo__matrix_8h.html#a146e851b1e1224e2e427cc99ccd2fbb5',1,'ejovo_matrix.h']]]
+  ['xor_5frng_0',['xor_rng',['../ejovo__rand_8h.html#ad7c04ebd61669e043aab507852c174f6',1,'ejovo_rand.h']]]
 ];
