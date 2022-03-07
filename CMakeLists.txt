@@ -4,6 +4,8 @@ project(TP_ALL)
 enable_language(C)
 enable_testing(ON)
 
+add_subdirectory(${CMAKE_SOURCE_DIR}/libejovo)
+
 set(INC ${CMAKE_SOURCE_DIR}/inc)
 set(SRC ${CMAKE_SOURCE_DIR}/src)
 set(TEST ${CMAKE_SOURCE_DIR}/test)
