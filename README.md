@@ -32,3 +32,8 @@ and then build the project.
 ```
 cmake --build ./
 ```
+
+
+### Submodules
+
+This repository has [https://github.com/ejovo13/libejovo/tree/a06a7b7abeddf38e0ff65df2c429170b7fc22eac](libejovo) as a dependency, linked to this repository using git's submodules feature.
