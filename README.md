@@ -7,7 +7,7 @@
 
 # TP
 
-This repository contains my C solutions to the Travaux Pratiques of my first year programming course. In total, there where 6 sets of homework problems that culminated in a final project writing a simple AI for a robot on wheels.
+This repository contains my C solutions to the Travaux Pratiques of my first year programming course. In total, there were 6 sets of homework problems that culminated in a final project writing a simple AI for a robot on wheels.
 
 The solutions for the TPs are found in the `src` directory, unfortunately I cannot post the questions as that would probably be a violation of copyright.
 
